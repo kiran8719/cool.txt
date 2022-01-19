@@ -1,2 +1,20 @@
-welcome to git
-need to add new line
+pipeline{
+    agent any
+    stages{
+        stage("git checkout"){
+            steps{
+                echo "git checkout"
+            }
+        }
+        stage("maven build"){
+            steps{
+                echo "maven build package"
+            }
+        }
+        stage("tomcat deploy"){
+            steps{ 
+            echo "deploy tomcat to production"
+            }
+        }
+    }
+}
