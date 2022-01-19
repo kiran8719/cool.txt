@@ -1,0 +1,8 @@
+pipeline{
+  agent any
+    stages{
+      steps("git checkout"){
+        echo "welcome to git"
+        }
+      }
+  }
